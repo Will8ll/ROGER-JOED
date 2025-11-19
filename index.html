@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitation de mariage | Dylane & Eudoxie</title>
+
+    <meta property="og:description" content="se marient ! !" />
+    <meta name="description" content="se marient ! !" />
+    <meta property="og:image" content="images/em4.jpeg" />
+    <meta property="og:title" content="Invitation de mariage | ROGER & JOED" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <link
+      rel="stylesheet"
+      href="https://dylane-eudoxie.spectral-ci.com/css/all.min.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+      :root {
+        --primary-color: #754e2e;
+        --bg-color: #f9f7f5;
+        --text-color: #333;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .lavishly {
+        font-family: "Lavishly Yours", cursive;
+        margin-top: "30px";
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        overflow-x: hidden;
+      }
+
+      /* ---------- HERO ---------- */
+      #hero {
+        background: url(8LL_0547.jpg) no-repeat center center / cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        padding: 0 20px;
+      }
+
+      #hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.35);
+      }
+
+      #hero .content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        width: 100%;
+      }
+
+      #hero h1 {
+        font-size: clamp(2.5em, 7vw, 5em);
+        margin-bottom: 10px;
+        line-height: 1.2;
+        word-wrap: break-word;
+      }
+
+      #hero p {
+        font-size: clamp(1.1em, 3vw, 1.5em);
+        margin-bottom: 15px;
+        font-weight: 300;
+      }
+
+      .date {
+        font-size: clamp(1em, 2.5vw, 1.2em);
+        margin-bottom: 25px;
+        font-weight: 400;
+      }
+
+      /* ---------- COUNTDOWN ---------- */
+      .countdown-container {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 20px;
+        margin: 20px auto;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        max-width: 90%;
+      }
+
+      .countdown-title {
+        font-size: clamp(1.2em, 3vw, 1.8em);
+        margin-bottom: 20px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .countdown {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      .countdown-item {
+        flex: 1 1 100px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 15px 10px;
+        border-radius: 15px;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        min-width: 80px;
+      }
+
+      .countdown-number {
+        font-size: clamp(1.5em, 5vw, 2.5em);
+        font-weight: 700;
+        display: block;
+      }
+
+      .countdown-label {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.9;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 10px 25px;
+        text-decoration: none;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .btn:hover {
+        background-color: #b3987d;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      /* ---------- RESPONSIVE ---------- */
+      @media (max-width: 768px) {
+        #hero {
+          height: auto;
+          padding: 60px 15px;
+        }
+
+        .countdown-container {
+          padding: 15px;
+        }
+
+        .countdown-item {
+          flex: 1 1 45%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #hero h1 {
+          font-size: 2.5em;
+        }
+
+        .countdown-item {
+          flex: 1 1 40%;
+          min-width: 60px;
+          padding: 10px;
+        }
+
+        .countdown-number {
+          font-size: 1.8em;
+        }
+
+        .countdown-title {
+          font-size: 1.2em;
+        }
+      }
+      /* --------- Ajustement Desktop --------- */
+      @media (min-width: 1024px) {
+        #hero {
+          height: 90vh; /* un peu moins haut sur grand écran */
+          background-size: contain; /* adapte l'image entière dans le cadre */
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center 30%; /* décale légèrement le cadrage vertical */
+        }
+
+        #hero::before {
+          background: rgba(
+            0,
+            0,
+            0,
+            0.25
+          ); /* légère teinte pour garder le texte lisible */
+        }
+
+        #hero .content {
+          padding: 40px;
+          top: -80px;
+        }
+      }
+      /* -------- Ajustement de la position du texte -------- */
+      #hero .content {
+        position: relative;
+        top: -40px; /* monte le texte de 40px */
+      }
+
+      @media (min-width: 1024px) {
+        #hero .content {
+          /* monte un peu plus haut sur desktop */
+        }
+      }
+
+      /* ---------- GALERIE ---------- */
+      #galerie {
+        background-color: #f9f7f5;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      #galerie h2 {
+        font-size: 2.5em;
+        color: var(--primary-color);
+        margin-bottom: 40px;
+      }
+
+      .galerie-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .galerie-item {
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .galerie-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      .galerie-item:hover img {
+        transform: scale(1.05);
+      }
+
+      .galerie-item:hover {
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      /* ---------- Responsive ---------- */
+      @media (max-width: 600px) {
+        #galerie h2 {
+          font-size: 1.8em;
+        }
+
+        .galerie-container {
+          grid-template-columns: 1fr;
+          gap: 15px;
+        }
+      } /* ---------- SECTION NOTRE MESSAGE ---------- */
+      #message {
+        background-color: #fff;
+        padding: 80px 20px;
+      }
+
+      .message-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1100px;
+        margin: 0 auto;
+        gap: 50px;
+        flex-wrap: wrap; /* pour mobile */
+      }
+
+      .message-image {
+        flex: 1 1 400px;
+        text-align: center;
+      }
+
+      .message-image img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+      }
+
+      .message-text {
+        flex: 1 1 400px;
+        text-align: left;
+        color: var(--text-color);
+      }
+
+      .message-text h2 {
+        font-size: 2.5em;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+      }
+
+      .message-text p {
+        font-size: 1.2em;
+        line-height: 1.8;
+        font-family: "Cormorant Garamond", serif;
+        color: #444;
+      }
+
+      /* ---------- Responsive ---------- */
+      @media (max-width: 768px) {
+        #message {
+          padding: 50px 15px; /* moins d’espace vertical */
+        }
+
+        .message-container {
+          flex-direction: column;
+          text-align: center;
+          gap: 15px; /* réduit l’espace entre texte et image */
+        }
+
+        .message-text h2 {
+          font-size: 1.8em;
+          margin-bottom: 10px;
+        }
+
+        .message-text p {
+          font-size: 1.05em;
+          line-height: 1.6;
+          padding: 0 10px;
+        }
+
+        .message-image img {
+          max-width: 90%; /* garde une belle proportion sur mobile */
+          margin-top: 10px;
+        }
+      }
+
+      /* ---------- INFOS DU MARIAGE ---------- */
+      #infos {
+        background-color: #f9f7f5;
+        padding: 80px 20px;
+        text-align: center;
+      }
+
+      #infos h2 {
+        font-size: 2.8em;
+        color: var(--primary-color);
+        margin-bottom: 50px;
+      }
+
+      .infos-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .info-item {
+        background: #fff;
+        padding: 30px 20px;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .info-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+      }
+
+      .info-item i {
+        font-size: 2.5em;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+      }
+
+      .info-item h3 {
+        font-size: 1.4em;
+        color: var(--secondary-color);
+        margin-bottom: 10px;
+        font-family: "Cormorant Garamond", serif;
+      }
+
+      .info-item p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        color: var(--text-color);
+      }
+
+      /* ---------- Responsive ---------- */
+      @media (max-width: 768px) {
+        #infos h2 {
+          font-size: 2em;
+        }
+
+        .info-item {
+          padding: 25px 15px;
+        }
+
+        .info-item i {
+          font-size: 2em;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="hero">
+      <div class="content">
+        <h1 class="lavishly">Roger & Joed</h1>
+        <br /><br /><br /><br />
+        <p>se marient !</p>
+        <div class="date">Le 27 décembre 2025 à 14h00</div>
+
+        <div class="countdown-container">
+          <div class="countdown-title">Le grand jour arrive dans...</div>
+          <div class="countdown" id="countdown">
+            <div class="countdown-item">
+              <span class="countdown-number" id="days">00</span>
+              <span class="countdown-label">Jours</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="hours">00</span>
+              <span class="countdown-label">Heures</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="minutes">00</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="seconds">00</span>
+              <span class="countdown-label">Secondes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======== SECTION NOTRE MESSAGE ======== -->
+    <section id="message">
+      <div class="message-container">
+        <div class="message-text">
+          <h2 class="lavishly">Notre message</h2>
+          <p>
+            «Ainsi, ils ne sont plus deux, mais ils sont comme une seule
+            personne. Ne séparez donc pas ce que Dieu a uni. »»<br />
+            Matthieu 19:6
+          </p>
+        </div>
+        <div class="message-image">
+          <img src="8LL_0547.jpg" alt="ROGER & JOED - Notre message" />
+        </div>
+      </div>
+    </section>
+    <!-- ======== SECTION GALERIE ======== -->
+    <section id="galerie">
+      <h2 class="lavishly">Galerie</h2>
+      <div class="galerie-container">
+        <div class="galerie-item">
+          <img src="8LL_0710.jpg" alt="Photo 1 - ROGER & JOED" />
+        </div>
+        <div class="galerie-item">
+          <img src="8LL_0722.jpg" alt="Photo 2 - ROGER & JOED" />
+        </div>
+        <div class="galerie-item">
+          <img src="8LL_0711.jpg" alt="Photo 3 - ROGER & JOED" />
+        </div>
+      </div>
+    </section>
+    <!-- ======== SECTION INFOS DU MARIAGE ======== -->
+    <section id="infos">
+      <h2 class="lavishly">Infos du Mariage</h2>
+      <div class="infos-container">
+        <div class="info-item">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Date</h3>
+          <p><strong>Samedi 27 décembre 2025</strong></p>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-ring"></i>
+          <h3>Mariage Civil</h3>
+          <p>14 h 00<br />Mairie de Bingerville</p>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-church"></i>
+          <h3>Réligieux</h3>
+          <p>
+            17h<br />La corne d’abondance Cocody faya génie 2000 non loin du
+            centre de santé urbain
+          </p>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-tshirt"></i>
+          <h3>Dress Code</h3>
+          <p>
+            <em>tenue de soirée <br />EXIGÉE</em>
+          </p>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-glass-cheers"></i>
+          <h3>Réception</h3>
+          <p>18 h 00</p>
+        </div>
+      </div>
+    </section>
+    <a href="" class="btn">Veuillez confirmer votre présence</a>
+    <script>
+      const targetDate = new Date("December 27, 2025 14:00:00").getTime();
+
+      const countdown = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+          clearInterval(countdown);
+          document.getElementById("countdown").innerHTML =
+            "<p>Le grand jour est arrivé 🎉</p>";
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = String(days).padStart(
+          2,
+          "0"
+        );
+        document.getElementById("hours").textContent = String(hours).padStart(
+          2,
+          "0"
+        );
+        document.getElementById("minutes").textContent = String(
+          minutes
+        ).padStart(2, "0");
+        document.getElementById("seconds").textContent = String(
+          seconds
+        ).padStart(2, "0");
+      }, 1000);
+    </script>
+  </body>
+</html>
